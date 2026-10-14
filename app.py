@@ -10,5 +10,9 @@ def index():
 def meny():
     return render_template('meny.html')
 
+@app.route('/varer')
+def varer():
+    return render_template('')
+
 if __name__ == "__main__":
     app.run()

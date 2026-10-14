@@ -12,7 +12,11 @@ def meny():
 
 @app.route('/varer')
 def varer():
-    return render_template('')
+    return render_template('varer.html')
+
+@app.route('/kontakter')
+def kontakter():
+    return render_template('kontakliste.html')
 
 if __name__ == "__main__":
     app.run()

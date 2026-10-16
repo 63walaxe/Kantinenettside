@@ -1,5 +1,9 @@
-*Overskrift1*
+_Overskrift1_
 
-*Overskrift2*
+_Overskrift2_
 
 Dette er en readme-fil
+
+## Kilder
+
+Datasettet med varer i 'data.py' er generert med KI.

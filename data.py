@@ -125,3 +125,41 @@ varer = {
         },
     ],
 }
+
+ukensmeny = [
+    {
+        "id": 21,
+        "dag": "Mandag",
+        "navn": "Lasagne med salat",
+        "pris": 75,
+        "bilde": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Lasagne_-_stonesoup.jpg/960px-Lasagne_-_stonesoup.jpg",
+    },
+    {
+        "id": 22,
+        "dag": "Tirsdag",
+        "navn": "Taco",
+        "pris": 70,
+        "bilde": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/960px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg",
+    },
+    {
+        "id": 23,
+        "dag": "Onsdag",
+        "navn": "Fiskegrateng med poteter",
+        "pris": 75,
+        "bilde": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Fish_Pie.jpg/960px-Fish_Pie.jpg",
+    },
+    {
+        "id": 24,
+        "dag": "Torsdag",
+        "navn": "Pasta bolognese",
+        "pris": 70,
+        "bilde": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Tagliatelle_al_rag%C3%B9_%28image_modified%29.jpg/960px-Tagliatelle_al_rag%C3%B9_%28image_modified%29.jpg",
+    },
+    {
+        "id": 25,
+        "dag": "Fredag",
+        "navn": "Pizza",
+        "pris": 80,
+        "bilde": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Homemade-Pizza_EXPS_FT23_376_EC_120123_3.jpg",
+    },
+]

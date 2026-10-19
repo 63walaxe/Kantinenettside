@@ -23,13 +23,13 @@ varer = {
             "id": 4,
             "navn": "Vann (flaske)",
             "pris": 15,
-            "bilde": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Water_Bottle_%2851308317077%29.jpg/960px-Water_Bottle_%2851308317077%29.jpg",
+            "bilde": "https://productimages.biltema.com/v1/image/imagebyfilename/98-9944_xl_1.jpg",
         },
         {
             "id": 5,
-            "navn": "Farris / mineralvann",
+            "navn": "Vann /m kullsyre",
             "pris": 25,
-            "bilde": "https://upload.wikimedia.org/wikipedia/commons/5/59/Drinking_glass_00118.gif",
+            "bilde": "https://productimages.biltema.com/v1/image/imagebyfilename/98-9945_xl_1.jpg",
         },
         {
             "id": 6,

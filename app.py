@@ -13,7 +13,7 @@ def meny():
     return render_template('meny.html', ukensmeny=ukensmeny)
 
 @app.route('/varer')
-def varer():
+def vis_varer():
     return render_template('varer.html', varer=varer)
 
 @app.route('/kontakter')

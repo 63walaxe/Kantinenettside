@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from data import varer,ukensmeny
+from data import varer,ukensmeny,kontakt
 
 
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def vis_varer():
 
 @app.route('/kontakter')
 def kontakter():
-    return render_template('kontakliste.html')
+    return render_template('kontakliste.html', kontakt=kontakt)
 
 if __name__ == "__main__":
     app.run(debug=True)

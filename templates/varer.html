@@ -5,15 +5,21 @@ Varer
 {% endblock %}
 
 {% block content %}
-<h2>Varer</h2>
+<h2 class="side-tittel">Varer</h2>
 <div class="varer">
 {% for kategori, liste in varer.items() %}
-    <h3>{{ kategori }}</h3>
-    {% for ting in liste %}
-    <img src={{ting.bilde}} alt={{ting.navn}}>
-    <h3>{{ting.navn}}</h3>
-    <p>{{ ting.pris }} kr</p>
-    {% endfor %}
+    <div class="kategori">
+        <h3 class="kategori-tittel">{{ kategori }}</h3>
+        <div class="vare-liste">
+        {% for ting in liste %}
+            <div class="vare-kort">
+                <img class="vare-bilde" src="{{ ting.bilde }}" alt="{{ ting.navn }}">
+                <h3 class="vare-navn">{{ ting.navn }}</h3>
+                <p class="vare-pris">{{ ting.pris }} kr</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
 {% endfor %}
 </div>
 {% endblock %}

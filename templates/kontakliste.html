@@ -1,3 +1,12 @@
 {% extends "base.html" %}
 
 {% block title %}Kontaktliste{% endblock %}
+
+{% block content %}
+    <div class="kontakt">
+        <p class="kontakt-linje">Telefon: {{ kontakt.telefon }}</p>
+        <p class="kontakt-linje">E-post: {{ kontakt.epost }}</p>
+        <p class="kontakt-linje">Adresse: {{ kontakt.adresse }}</p>
+        <p class="kontakt-linje">Åpningstider: {{ kontakt.apningstider }}</p>
+    </div>
+{% endblock %}

@@ -12,15 +12,15 @@
 
 body {
   margin: 0;
-  min-height: 100vh;                     /* bakgrunnen dekker hele skjermen */
+  min-height: 100vh; /* bakgrunnen dekker hele skjermen */
   display: flex;
-  flex-direction: column;                /* gjør at footeren havner nederst */
+  flex-direction: column; /* gjør at footeren havner nederst */
   font-family: "Segoe UI", Arial, sans-serif;
   color: var(--tekst);
 
   /* Gradient: oransje øverst, svart nederst */
   background: linear-gradient(to bottom, var(--oransje), var(--svart));
-  background-attachment: fixed;          /* gradienten står stille når du scroller */
+  background-attachment: fixed; /* gradienten står stille når du scroller */
 }
 
 .topp {
@@ -52,7 +52,7 @@ body {
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 20px;
-  transition: background-color 0.2s;     /* myk overgang ved hover */
+  transition: background-color 0.2s; /* myk overgang ved hover */
 }
 
 .meny-lenke:hover {
@@ -61,7 +61,7 @@ body {
 }
 
 .innhold {
-  flex: 1;                               /* fyller plassen mellom topp og bunn */
+  flex: 1; /* fyller plassen mellom topp og bunn */
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -97,7 +97,7 @@ body {
 }
 
 .velkommen .side-tittel {
-  color: var(--oransje-mork);            /* oransje tittel inne i den hvite boksen */
+  color: var(--oransje-mork); /* oransje tittel inne i den hvite boksen */
   text-shadow: none;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .kategori-tittel {
-  text-transform: capitalize;            /* stor forbokstav */
+  text-transform: capitalize; /* stor forbokstav */
   color: var(--hvit);
   font-size: 1.5rem;
   border-bottom: 2px solid var(--hvit);
@@ -140,7 +140,7 @@ body {
 }
 
 .vare-kort:hover {
-  transform: translateY(-5px);           /* kortet løfter seg litt */
+  transform: translateY(-5px); /* kortet løfter seg litt */
 }
 
 .vare-bilde {
@@ -226,5 +226,5 @@ body {
 }
 
 .kontakt-linje:last-child {
-  border-bottom: none;                   /* ingen strek under siste linje */
+  border-bottom: none; /* ingen strek under siste linje */
 }

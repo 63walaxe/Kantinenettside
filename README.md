@@ -7,3 +7,4 @@ Dette er en readme-fil
 ## Kilder
 
 Datasettet med varer i 'data.py' er generert med KI.
+Genererte klasser og grunnleggene styling i 'style.css'

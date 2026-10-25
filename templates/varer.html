@@ -15,6 +15,8 @@ Varer
             <div class="vare-kort">
                 <img class="vare-bilde" src="{{ ting.bilde }}" alt="{{ ting.navn }}">
                 <h3 class="vare-navn">{{ ting.navn }}</h3>
+                <p class="info">{{ ting.kalorier }} kcal</p>
+                <p class="info">Allergener: {{ ting.allergener }}</p>
                 <p class="vare-pris">{{ ting.pris }} kr</p>
             </div>
         {% endfor %}

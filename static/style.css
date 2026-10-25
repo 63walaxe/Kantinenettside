@@ -1,49 +1,42 @@
-/* ===== Farger (endre her for å bytte tema) ===== */
+/* ===== Farger ===== */
 
 :root {
   --oransje: #ff8c1a;
-  --oransje-mork: #e65100;
   --svart: #111111;
-  --tekst: #2b2b2b;
   --hvit: #ffffff;
 }
 
-/* ===== Felles for alle sider (base.html) ===== */
+/* ===== Hele siden ===== */
 
 body {
   margin: 0;
-  min-height: 100vh; /* bakgrunnen dekker hele skjermen */
-  display: flex;
-  flex-direction: column; /* gjør at footeren havner nederst */
-  font-family: "Segoe UI", Arial, sans-serif;
-  color: var(--tekst);
-
-  /* Gradient: oransje øverst, svart nederst */
-  background: linear-gradient(to bottom, var(--oransje), var(--svart));
-  background-attachment: fixed; /* gradienten står stille når du scroller */
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, var(--oransje), var(--svart) 85%);
+  background-attachment: fixed;
 }
 
+/* ===== Topp ===== */
+
 .topp {
-  background-color: rgba(0, 0, 0, 0.25); /* litt gjennomsiktig svart */
-  color: var(--hvit);
-  padding: 16px 32px;
-  display: flex;
-  justify-content: space-between;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  padding: 16px 32px;
+  color: var(--hvit);
 }
 
 .logo {
   margin: 0;
-  font-size: 2rem;
-  letter-spacing: 2px;
 }
 
 .meny-lenker {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   gap: 8px;
-  flex-wrap: wrap;
 }
 
 .meny-lenke {
@@ -52,152 +45,73 @@ body {
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 20px;
-  transition: background-color 0.2s; /* myk overgang ved hover */
 }
 
 .meny-lenke:hover {
   background-color: var(--hvit);
-  color: var(--oransje-mork);
+  color: var(--oransje);
 }
+
+/* ===== Innhold ===== */
 
 .innhold {
-  flex: 1; /* fyller plassen mellom topp og bunn */
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px 16px;
-  box-sizing: border-box;
+  grid-row: 2;
+  padding: 32px;
 }
 
-.side-tittel {
+.side-tittel,
+.kategori-tittel {
   color: var(--hvit);
-  font-size: 2.2rem;
-  margin-top: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* ===== Bunn ===== */
 
 .bunn {
-  background-color: rgba(0, 0, 0, 0.5);
+  grid-row: 3;
+  background-color: var(--svart);
   color: var(--hvit);
   text-align: center;
   padding: 16px;
 }
 
-.bunn-tekst {
-  margin: 0;
-}
+/* ===== Hvite bokser og kort ===== */
 
-/* ===== Hjem (index.html) ===== */
-
-.velkommen {
+.velkommen,
+.kontakt,
+.vare-kort,
+.rett-kort {
   background-color: var(--hvit);
   border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 .velkommen .side-tittel {
-  color: var(--oransje-mork); /* oransje tittel inne i den hvite boksen */
-  text-shadow: none;
+  color: var(--oransje);
 }
 
-.velkommen-tekst {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
+/* ===== Rutenett med kort (varer og meny) ===== */
 
-/* ===== Varer (varer.html) ===== */
-
-.varer {
-}
-
-.kategori {
-  margin-bottom: 40px;
-}
-
-.kategori-tittel {
-  text-transform: capitalize; /* stor forbokstav */
-  color: var(--hvit);
-  font-size: 1.5rem;
-  border-bottom: 2px solid var(--hvit);
-  padding-bottom: 8px;
-}
-
-.vare-liste {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-}
-
-.vare-kort {
-  background-color: var(--hvit);
-  border-radius: 16px;
-  padding: 16px;
-  text-align: center;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s;
-}
-
-.vare-kort:hover {
-  transform: translateY(-5px); /* kortet løfter seg litt */
-}
-
-.vare-bilde {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-}
-
-.vare-navn {
-  font-size: 1rem;
-  margin: 12px 0 8px;
-}
-
-.vare-pris {
-  display: inline-block;
-  background-color: var(--oransje);
-  color: var(--hvit);
-  font-weight: bold;
-  padding: 4px 12px;
-  border-radius: 12px;
-  margin: 0;
-}
-
-/* ===== Ukens meny (meny.html) ===== */
-
+.vare-liste,
 .ukemeny {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
 }
 
+.vare-kort,
 .rett-kort {
-  background-color: var(--hvit);
-  border-radius: 16px;
-  padding: 16px;
   text-align: center;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-  border-top: 6px solid var(--oransje);
-  transition: transform 0.2s;
 }
 
-.rett-kort:hover {
-  transform: translateY(-5px);
-}
-
-.rett-dag {
-  font-size: 1.4rem;
-  color: var(--oransje-mork);
-  margin: 0 0 12px;
-}
-
+.vare-bilde,
 .rett-bilde {
-  height: 150px;
   width: 150px;
+  height: 150px;
   object-fit: contain;
 }
 
+.vare-pris,
 .rett-pris {
   display: inline-block;
   background-color: var(--oransje);
@@ -205,26 +119,16 @@ body {
   font-weight: bold;
   padding: 4px 12px;
   border-radius: 12px;
-  margin: 12px 0 0;
 }
 
-/* ===== Kontakt (kontakliste.html) ===== */
-
-.kontakt {
-  background-color: var(--hvit);
-  border-radius: 16px;
-  padding: 16px 32px;
-  max-width: 500px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+.rett-dag {
+  color: var(--oransje);
 }
 
-.kontakt-linje {
-  font-size: 1.1rem;
-  padding: 12px 0;
-  margin: 0;
-  border-bottom: 1px solid #eeeeee;
-}
+/* ===== Kalorier og allergener ===== */
 
-.kontakt-linje:last-child {
-  border-bottom: none; /* ingen strek under siste linje */
+.info {
+  font-size: 0.85rem;
+  color: gray;
+  margin: 4px 0;
 }
